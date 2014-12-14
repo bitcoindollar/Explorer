@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit bootstrap="Tests/bootstrap.php" colors="true">
+    <php>
+        <const name="IP" value="127.0.0.1"/>
+        <const name="PORT" value="9000"/>
+        <const name="USERNAME" value="coin"/>
+        <const name="PASSWORD" value="coinpass"/>
+    </php>
+    <testsuites>
+        <testsuite name="Test Suite">
+            <directory>./Tests/</directory>
+        </testsuite>
+    </testsuites>
+    <filter>
+        <whitelist>
+            <directory>./</directory>
+            <exclude>
+                <directory>./Tests</directory>
+            </exclude>
+        </whitelist>
+    </filter>
+</phpunit>

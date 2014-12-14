@@ -2,12 +2,12 @@
 
 /**
  * Fetch data from altcoin/bitcoin deamon
- * 
+ *
  * @author Lukas Mestan
  * @copyright GPL v2
  * @version 1.0.2
  */
-class DeamonData  
+class DaemonData  
 {
     /**
      * Wallet IP
@@ -44,11 +44,11 @@ class DeamonData
      * @var array
      */
     protected $request = array();
-    
-        
+
+
     /**
      * Class contructor
-     * 
+     *
      * @access public
      * @param string $ip
      * @param integer $port
@@ -62,10 +62,10 @@ class DeamonData
         $this->username = $username;
         $this->password = $password;
     }
-    
+
     /**
      * Get data from JSON RPC by method & params
-     * 
+     *
      * @access public
      * @param string $method
      * @param array $params
@@ -77,13 +77,13 @@ class DeamonData
             'method' => $method,
             'params' => $params
         );
-        
+
         return $this->fetch_data();
     }
-    
+
     /**
      * Fetch JsonRPC request information from the deamon
-     * 
+     *
      * @access private
      * @return array
      * @see error codes https://github.com/bitcoin/bitcoin/blob/master/src/rpcprotocol.h#L34
@@ -97,8 +97,8 @@ class DeamonData
         curl_setopt($ch, CURLOPT_PORT, $this->port);
         curl_setopt($ch, CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
         curl_setopt($ch, CURLOPT_USERPWD, $this->username . ":" . $this->password);
-        curl_setopt($ch, CURLOPT_HTTPHEADER, array( 
-            "Content-type: application/json" 
+        curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+            "Content-type: application/json"
         ));
         curl_setopt($ch, CURLOPT_POST, TRUE);
         curl_setopt($ch, CURLOPT_POSTFIELDS, $request);
@@ -118,5 +118,5 @@ class DeamonData
             return $info["result"];
         }
     }
-    
+
 }

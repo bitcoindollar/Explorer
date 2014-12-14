@@ -2,18 +2,18 @@
 
 /**
  * Fetch network/wallet information from altcoin/bitcoin deamon
- * 
+ *
  * @author Lukas Mestan
  * @copyright GPL v2
  * @see https://en.bitcoin.it/wiki/Original_Bitcoin_client/API_calls_list
  * @version 1.0.2
  */
-class NetworkInfo extends DeamonData
-{  
+class NetworkInfo extends DaemonData
+{
 
     /**
      * Get information about the wallets network and block chain
-     * 
+     *
      * @access public
      * @return array
      */
@@ -23,8 +23,8 @@ class NetworkInfo extends DeamonData
     }
 
     /**
-     *  Get data about each connected node. 
-     * 
+     *  Get data about each connected node.
+     *
      * @access public
      * @internal from bitcoin version 0.7
      * @return array
@@ -35,10 +35,10 @@ class NetworkInfo extends DeamonData
     }
 
     /**
-     * Returns an object containing mining-related information: 
-     * blocks, currentblocksize, currentblocktx, difficulty, errors, 
+     * Returns an object containing mining-related information:
+     * blocks, currentblocksize, currentblocktx, difficulty, errors,
      * generate, genproclimit,hashespersec, pooledtx, testnet
-     * 
+     *
      * @access public
      * @return array
      */
@@ -49,7 +49,7 @@ class NetworkInfo extends DeamonData
 
     /**
      * Returns a recent hashes per second performance measurement while generating
-     * 
+     *
      * @access public
      * @return array
      */
@@ -57,10 +57,10 @@ class NetworkInfo extends DeamonData
     {
         return $this->get_data('gethashespersec');
     }
-    
+
     /**
      * Get calculated network hash rate for the latest block
-     * 
+     *
      * @access public
      * @param string $block_index
      * @return array
