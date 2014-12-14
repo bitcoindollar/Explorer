@@ -18,7 +18,3 @@ php:
 # omitting "script:" will default to phpunit
 # use the $DB env variable to determine the phpunit.xml to use
 script: phpunit --configuration phpunit.xml --coverage-text
-
-# configure notifications (email, IRC, campfire etc)
-notifications:
-    irc: "irc.freenode.org#yourfavouriteroomfortravis"
