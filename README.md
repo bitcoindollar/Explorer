@@ -9,10 +9,15 @@ It can send HTTP requests to a Bitcoin peer server to perform several operations
 
 Currently it can get transaction details, get peer information, get mining information, get network hashes, get block chains, etc..
 
+Award
+======================
+
+Class won "[PHP Programming Innovation Award](http://www.phpclasses.org/winners/year/2014/)" on phpclasses.org (August 2014). [Link](http://www.phpclasses.org/package/8730-PHP-Get-transaction-information-with-Bitcoin-protocol.html). 
+
 
 Usage
 ======================
-```
+```php
 include "daemondata.php";
 include "blockchain.php";
 
