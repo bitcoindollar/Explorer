@@ -29,7 +29,7 @@ class NetworkInfo extends DaemonData
      * @internal from bitcoin version 0.7
      * @return array
      */
-    public function get_peer_info ()
+    public function get_peer_info()
     {
         return $this->get_data('getpeerinfo');
     }

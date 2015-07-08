@@ -37,13 +37,6 @@ class DaemonData
      * @var string
      */
     protected $password = '';
-    /**
-     * Request data
-     *
-     * @access protected
-     * @var array
-     */
-    protected $request = array();
 
 
     /**
@@ -71,27 +64,25 @@ class DaemonData
      * @param array $params
      * @return array
      */
-    public function get_data($method, $params)
+    public function get_data($method, array $params = array())
     {
-        $this->request = array(
+        return $this->fetch_data(array(
             'method' => $method,
             'params' => $params
-        );
-
-        return $this->fetch_data();
+        ));
     }
 
     /**
      * Fetch JsonRPC request information from the deamon
      *
      * @access private
+     * @param array $request
      * @return array
      * @see error codes https://github.com/bitcoin/bitcoin/blob/master/src/rpcprotocol.h#L34
+     * @throws Exception
      */
-    private function fetch_data()
+    private function fetch_data($request)
     {
-        $request = json_encode($this->request);
-
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $this->ip);
         curl_setopt($ch, CURLOPT_PORT, $this->port);
@@ -101,7 +92,7 @@ class DaemonData
             "Content-type: application/json"
         ));
         curl_setopt($ch, CURLOPT_POST, TRUE);
-        curl_setopt($ch, CURLOPT_POSTFIELDS, $request);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($request));
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);
         curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, FALSE);
@@ -111,12 +102,10 @@ class DaemonData
         $info = json_decode($response, TRUE);
         if ( ! empty($info["error"]) )
         {
-            return $info["error"]["message"] . " (Error Code: " . $info["error"]["code"] . ")";
+            throw new Exception($info["error"]["message"] . " (Error Code: " . $info["error"]["code"] . ")");
         }
-        else
-        {
-            return $info["result"];
-        }
+
+        return $info["result"];
     }
 
 }
