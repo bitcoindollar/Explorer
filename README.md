@@ -23,8 +23,8 @@ include "blockchain.php";
 
 $block = new BlockChain($ip, $port, $username, $password);
 
-$block_info_from_hash = $block->get_block('000000000000000007c4695c756bb944cf31f1f20487a32375d9d4c61dfd6349');
-$block_info_from_height = $block->get_block_hash('308788');
+$blockInfoFromHash = $block->getBlock('000000000000000007c4695c756bb944cf31f1f20487a32375d9d4c61dfd6349');
+$blockInfoFromHeight = $block->getBlockHash('308788');
 
-var_dump($block_info_from_hash, $block_info_from_height);
+var_dump($blockInfoFromHash, $blockInfoFromHeight);
 ```
