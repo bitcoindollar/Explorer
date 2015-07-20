@@ -64,9 +64,9 @@ class DaemonData
      * @param array $params
      * @return array
      */
-    public function get_data($method, array $params = array())
+    public function getData($method, array $params = array())
     {
-        return $this->fetch_data(array(
+        return $this->fetchData(array(
             'method' => $method,
             'params' => $params
         ));
@@ -81,7 +81,7 @@ class DaemonData
      * @see error codes https://github.com/bitcoin/bitcoin/blob/master/src/rpcprotocol.h#L34
      * @throws Exception
      */
-    private function fetch_data($request)
+    private function fetchData($request)
     {
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $this->ip);
@@ -94,8 +94,7 @@ class DaemonData
         curl_setopt($ch, CURLOPT_POST, TRUE);
         curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($request));
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
-        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);
-        curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, FALSE);
+        
         $response = curl_exec($ch);
         curl_close($ch);
 

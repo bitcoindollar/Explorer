@@ -17,9 +17,9 @@ class NetworkInfo extends DaemonData
      * @access public
      * @return array
      */
-    public function get_info()
+    public function getInfo()
     {
-        return $this->get_data('getinfo');
+        return $this->getData('getinfo');
     }
 
     /**
@@ -29,22 +29,22 @@ class NetworkInfo extends DaemonData
      * @internal from bitcoin version 0.7
      * @return array
      */
-    public function get_peer_info()
+    public function getPeerInfo()
     {
-        return $this->get_data('getpeerinfo');
+        return $this->getData('getpeerinfo');
     }
 
     /**
      * Returns an object containing mining-related information:
      * blocks, currentblocksize, currentblocktx, difficulty, errors,
-     * generate, genproclimit,hashespersec, pooledtx, testnet
+     * generate, genproclimit, hashespersec, pooledtx, testnet
      *
      * @access public
      * @return array
      */
-    public function get_mining_info()
+    public function getMiningInfo()
     {
-        return $this->get_data('getmininginfo');
+        return $this->getData('getmininginfo');
     }
 
     /**
@@ -53,29 +53,29 @@ class NetworkInfo extends DaemonData
      * @access public
      * @return array
      */
-    public function get_hashes_per_second()
+    public function getHashesPerSecond()
     {
-        return $this->get_data('gethashespersec');
+        return $this->getData('gethashespersec');
     }
 
     /**
      * Get calculated network hash rate for the latest block
      *
      * @access public
-     * @param string $block_index
+     * @param string $blockIndex
      * @return array
      */
-    public function get_network_hash_for_latest_block($block_index = NULL)
+    public function getNetworkHashForLatestBlock($blockIndex = NULL)
     {
-        if( isset($block_index) )
+        if( isset($blockIndex) )
         {
-            return $this->get_data('getnetworkhashps', array(
-                $block_index
+            return $this->getData('getnetworkhashps', array(
+                $blockIndex
             ));
         }
         else
         {
-            return $this->get_data('getnetworkhashps');
+            return $this->getData('getnetworkhashps');
         }
     }
 

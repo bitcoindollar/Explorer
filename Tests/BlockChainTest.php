@@ -2,7 +2,7 @@
 
 class BlockInfo extends BlockChain
 {
-    public function get_data($method, $params)
+    public function getData($method, $params)
     {
         return '{
             "hash" : "000000000000010c5ba86d05c6f43df46921d453d23fdafe85229f6a7d840e16",
@@ -149,7 +149,7 @@ class BlockChainTest extends PHPUnit_Framework_TestCase
     public function testGetBlock()
     {
         $blockChain = new BlockInfo(IP, PORT, USERNAME, PASSWORD);
-        $block = $blockChain->get_block('000000000000010c5ba86d05c6f43df46921d453d23fdafe85229f6a7d840e16');
+        $block = $blockChain->getBlock('000000000000010c5ba86d05c6f43df46921d453d23fdafe85229f6a7d840e16');
 
         $this->assertFalse(empty($block));
     }

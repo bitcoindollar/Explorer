@@ -15,13 +15,13 @@ class BlockChain extends DaemonData
      * Get data for the specified block hash
      *
      * @access public
-     * @param string $block_hash
+     * @param string $blockHash
      * @return array
      */
-    public function get_block($block_hash)
+    public function getBlock($blockHash)
     {
-        return $this->get_data('getblock', array(
-            $block_hash
+        return $this->getData('getblock', array(
+            $blockHash
         ));
     }
 
@@ -32,9 +32,9 @@ class BlockChain extends DaemonData
      * @internal from bitcoin version 0.9
      * @return array
      */
-    public function get_best_block_hash()
+    public function getBestBlockHash()
     {
-        return $this->get_data('getbestblockhash');
+        return $this->getData('getbestblockhash');
     }
 
     /**
@@ -43,21 +43,21 @@ class BlockChain extends DaemonData
      * @access public
      * @return array
      */
-    public function get_block_count()
+    public function getBlockCount()
     {
-        return $this->get_data('getblockcount');
+        return $this->getData('getblockcount');
     }
 
     /**
      * Get hash value for the specified block in the chain
      *
      * @access public
-     * @param string $block_index
+     * @param string $blockIndex
      * @return array
      */
-    public function get_block_hash($block_index)
+    public function getBlockHash($blockIndex)
     {
-        return $this->get_data('getblockhash', array(
+        return $this->getData('getblockhash', array(
             $block_index
         ));
     }
