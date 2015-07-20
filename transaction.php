@@ -15,13 +15,13 @@ class Transaction extends DaemonData
      * Get an object about the given transaction
      *
      * @access public
-     * @param string $tx_id
+     * @param string $txId
      * @return array
      */
-    public function get_transaction($tx_id)
+    public function getTransaction($txId)
     {
-        return $this->get_data('gettransaction', array(
-            $tx_id
+        return $this->getData('gettransaction', array(
+            $txId
         ));
     }
 
@@ -30,14 +30,14 @@ class Transaction extends DaemonData
      *
      * @access public
      * @internal from bitcoin version 0.7
-     * @param string $tx_id
-     * @param integer |string$verbose
+     * @param string $txId
+     * @param integer|string $verbose
      * @return array
      */
-    public function get_raw_transaction($tx_id, $verbose = 1)
+    public function getRawTransaction($txId, $verbose = 1)
     {
-        return $this->get_data('getrawtransaction', array(
-            $tx_id,
+        return $this->getData('getrawtransaction', array(
+            $txId,
             $verbose
         ));
     }
