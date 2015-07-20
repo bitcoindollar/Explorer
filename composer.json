@@ -1,0 +1,19 @@
+{
+    "name": "arzzen/altcoin-bitcoin-explorer",
+    "type": "library",
+    "description": "PHP Altcoin/Bitcoin data Explorer",
+    "keywords": ["bitcoin", "altcoin", "php", "explorer", "mining", "transactions"],
+    "homepage": "https://github.com/arzzen/altcoin-bitcoin-explorer",
+    "license": "GPL2",
+    "authors": [
+        {
+            "name": "Lukas Mestan",
+            "email": "arzzen@gmail.com",
+            "homepage": "https://github.com/arzzen/",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0"
+    }
+}
