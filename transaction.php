@@ -4,7 +4,7 @@
  * Fetch transactions information from altcoin/bitcoin deamon
  *
  * @author Lukas Mestan
- * @copyright GPL v2
+ * @copyright MIT
  * @see https://en.bitcoin.it/wiki/Original_Bitcoin_client/API_calls_list
  * @version 1.0.2
  */
