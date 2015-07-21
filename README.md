@@ -1,5 +1,6 @@
-Altcoin/Bitcoin Data Explorer [![Build Status](https://travis-ci.org/arzzen/altcoin-bitcoin-explorer.svg)](https://travis-ci.org/arzzen/altcoin-bitcoin-explorer) [![SensioLabs Insight](https://img.shields.io/sensiolabs/i/71672116-520c-4715-b419-be2dae112b86.svg)](https://insight.sensiolabs.com/projects/71672116-520c-4715-b419-be2dae112b86)
+Altcoin/Bitcoin Data Explorer 
 ======================
+[![Build Status](https://travis-ci.org/arzzen/altcoin-bitcoin-explorer.svg)](https://travis-ci.org/arzzen/altcoin-bitcoin-explorer) [![SensioLabs Insight](https://img.shields.io/sensiolabs/i/71672116-520c-4715-b419-be2dae112b86.svg)](https://insight.sensiolabs.com/projects/71672116-520c-4715-b419-be2dae112b86) [![License](https://poser.pugx.org/arzzen/altcoin-bitcoin-explorer/license)](https://packagist.org/packages/arzzen/altcoin-bitcoin-explorer)
 
 PHP Altcoin/Bitcoin data Explorer
 
