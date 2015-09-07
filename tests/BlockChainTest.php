@@ -4,7 +4,7 @@ use BlockExplorer\BlockChain;
 
 class BlockInfo extends BlockChain
 {
-    public function getData($method, $params)
+    public function getData($method, array $params = array())
     {
         return '{
             "hash" : "000000000000010c5ba86d05c6f43df46921d453d23fdafe85229f6a7d840e16",
