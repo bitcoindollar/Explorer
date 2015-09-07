@@ -1,5 +1,7 @@
 <?php
 
+use BlockExplorer\DaemonData;
+
 class DaemonDataOverride extends DaemonData
 {
     public function getIP()

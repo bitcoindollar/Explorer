@@ -1,5 +1,7 @@
 <?php
 
+use BlockExplorer\BlockChain;
+
 class BlockInfo extends BlockChain
 {
     public function getData($method, $params)

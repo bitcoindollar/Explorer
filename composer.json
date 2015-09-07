@@ -4,7 +4,7 @@
     "description": "PHP Altcoin/Bitcoin data Explorer",
     "keywords": ["bitcoin", "altcoin", "php", "explorer", "mining", "transactions"],
     "homepage": "https://github.com/arzzen/altcoin-bitcoin-explorer",
-    "license": "GPL-2.0",
+    "license": "MIT",
     "authors": [
         {
             "name": "Lukas Mestan",
@@ -13,7 +13,15 @@
             "role": "Developer"
         }
     ],
+    "autoload": {
+        "psr-4": {
+            "BlockExplorer\\": "src"
+        }
+    },
     "require": {
         "php": ">=5.3.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "4.0.*"
     }
 }
