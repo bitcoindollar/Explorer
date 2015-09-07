@@ -20,7 +20,7 @@ Add this to the `require` section in your `composer.json` file.
 ```json
 {
     "require": {
-        "arzzen/altcoin-bitcoin-explorer": "~1.0"
+        "arzzen/altcoin-bitcoin-explorer": "1.1.*"
     }
 }
 ```
@@ -28,8 +28,7 @@ Add this to the `require` section in your `composer.json` file.
 Usage
 ======================
 ```php
-include "daemondata.php";
-include "blockchain.php";
+use BlockExplorer\BlockChain;;
 
 $block = new BlockChain($ip, $port, $username, $password);
 
@@ -38,7 +37,6 @@ $blockInfoFromHeight = $block->getBlockHash('308788');
 
 var_dump($blockInfoFromHash, $blockInfoFromHeight);
 ```
-
 
 Award
 ======================

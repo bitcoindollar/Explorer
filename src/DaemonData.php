@@ -1,5 +1,8 @@
 <?php
 
+namespace BlockExplorer;
+use Exception;
+
 /**
  * Fetch data from altcoin/bitcoin deamon
  *

@@ -1,5 +1,7 @@
 <?php
 
+namespace BlockExplorer;
+
 /**
  * Fetch block information from altcoin/bitcoin deamon
  *
