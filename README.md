@@ -28,7 +28,7 @@ Add this to the `require` section in your `composer.json` file.
 Usage
 ======================
 ```php
-use BlockExplorer\BlockChain;;
+use BlockExplorer\BlockChain;
 
 $block = new BlockChain($ip, $port, $username, $password);
 
