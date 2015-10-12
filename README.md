@@ -27,15 +27,46 @@ Add this to the `require` section in your `composer.json` file.
 
 Usage
 ======================
+Information about network:
 ```php
-use BlockExplorer\BlockChain;
+# Get information from network 
+use BlockExplorer\NetworkInfo;
+$block = new NetworkInfo($ip, $port, $username, $password);
 
+# Get information about the wallets network and block chain
+$networkInfo = $network->getInfo();
+print($networkInfo);
+
+# Get data about each connected node
+$peerInfo = $network->getPeerInfo();
+print($peerInfo);
+
+# Get calculated network hash rate for the latest block
+$latestHash = $network->getNetworkHashForLatestBlock();
+print($latestHash);
+```
+
+Information about transactions:
+```php
+# Fetch transactions information
+use BlockExplorer\Transaction;
+$block = new Transaction($ip, $port, $username, $password);
+
+$transactionInfo = $block->getTransaction('51b78168d94ec307e2855697209275d477e05d8647caf29cb9e38fb6a4661145');
+print($transactionInfo);
+```
+
+Information from block chain:
+```php
+# Get information from blockchain
+use BlockExplorer\BlockChain;
 $block = new BlockChain($ip, $port, $username, $password);
 
 $blockInfoFromHash = $block->getBlock('000000000000000007c4695c756bb944cf31f1f20487a32375d9d4c61dfd6349');
-$blockInfoFromHeight = $block->getBlockHash('308788');
+print($blockInfoFromHash);
 
-var_dump($blockInfoFromHash, $blockInfoFromHeight);
+$blockInfoFromHeight = $block->getBlockHash('308788');
+print($blockInfoFromHeight);
 ```
 
 Award
