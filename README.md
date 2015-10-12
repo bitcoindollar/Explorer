@@ -25,8 +25,8 @@ Add this to the `require` section in your `composer.json` file.
 }
 ```
 
-Usage
-======================
+## Usage
+
 Information about network:
 ```php
 # Get information from network 
@@ -69,8 +69,7 @@ $blockInfoFromHeight = $block->getBlockHash('308788');
 print($blockInfoFromHeight);
 ```
 
-Award
-======================
+## Award
 
 Class won "[PHP Programming Innovation Award](http://www.phpclasses.org/winners/year/2014/)" on phpclasses.org (August 2014). [Link](http://www.phpclasses.org/package/8730-PHP-Get-transaction-information-with-Bitcoin-protocol.html). 
 
