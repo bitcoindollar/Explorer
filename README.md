@@ -50,9 +50,9 @@ Information about transactions:
 ```php
 # Fetch transactions information
 use BlockExplorer\Transaction;
-$block = new Transaction($ip, $port, $username, $password);
+$transaction = new Transaction($ip, $port, $username, $password);
 
-$transactionInfo = $block->getTransaction('51b78168d94ec307e2855697209275d477e05d8647caf29cb9e38fb6a4661145');
+$transactionInfo = $transaction->getTransaction('51b78168d94ec307e2855697209275d477e05d8647caf29cb9e38fb6a4661145');
 print_r($transactionInfo);
 ```
 
