@@ -31,7 +31,7 @@ Information about network:
 ```php
 # Get information from network 
 use BlockExplorer\NetworkInfo;
-$block = new NetworkInfo($ip, $port, $username, $password);
+$network = new NetworkInfo($ip, $port, $username, $password);
 
 # Get information about the wallets network and block chain
 $networkInfo = $network->getInfo();
