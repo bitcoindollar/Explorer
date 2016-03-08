@@ -8,7 +8,7 @@ namespace BlockExplorer;
  * @author Lukas Mestan
  * @copyright MIT
  * @see https://en.bitcoin.it/wiki/Original_Bitcoin_client/API_calls_list
- * @version 1.0.2
+ * @version 1.1.2
  */
 class NetworkInfo extends DaemonData
 {
@@ -25,7 +25,7 @@ class NetworkInfo extends DaemonData
     }
 
     /**
-     *  Get data about each connected node.
+     * Get data about each connected node.
      *
      * @access public
      * @internal from bitcoin version 0.7

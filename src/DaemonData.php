@@ -7,8 +7,8 @@ use Exception;
  * Fetch data from altcoin/bitcoin deamon
  *
  * @author Lukas Mestan
- * @copyright GPL v2
- * @version 1.0.2
+ * @copyright MIT
+ * @version 1.1.2
  */
 class DaemonData  
 {

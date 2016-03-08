@@ -8,7 +8,7 @@ namespace BlockExplorer;
  * @author Lukas Mestan
  * @copyright MIT
  * @see https://en.bitcoin.it/wiki/Original_Bitcoin_client/API_calls_list
- * @version 1.0.2
+ * @version 1.1.2
  */
 class Transaction extends DaemonData
 {
