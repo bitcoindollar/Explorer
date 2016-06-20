@@ -75,10 +75,8 @@ class NetworkInfo extends DaemonData
                 $blockIndex
             ));
         }
-        else
-        {
-            return $this->getData('getnetworkhashps');
-        }
+
+        return $this->getData('getnetworkhashps');
     }
 
 }
