@@ -60,7 +60,7 @@ class BlockChain extends DaemonData
     public function getBlockHash($blockIndex)
     {
         return $this->getData('getblockhash', array(
-            $block_index
+            $blockIndex
         ));
     }
 
